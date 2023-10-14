@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Notifications page | Frontend Mentor</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body
+    class="font-body text-[16px] grid place-content-center min-h-screen bg-ultra-pale-blue"
+  >
+    <section class="container mx-auto">
+      <div
+        class="card max-w-[750px] mx-auto min-h-screen md:min-h-full shadow-custom rounded-[16px] overflow-hidden px-5 lg:px-9 pt-10 bg-white"
+      >
+        <div class="flex justify-between items-center mb-8">
+          <h1 class="heading-1 text-deep-blue">
+            Notifications
+            <span
+              id="title-notification-number"
+              class="text-[16px] text-white bg-blue px-[10px] py-[2px] rounded-md relative -top-1 ml-2"
+            ></span>
+          </h1>
+
+          <button id="mark-all-btn" type="button" class="text-darker-blue-gray focus-visible:outline-dotted rounded-full overflow-hidden py-1.5 px-3">
+            <span>Mark all as read</span>
+          </button>
+        </div>
+
+        <div class="notifications-list flex flex-col gap-4">
+          <!-- Notification #1 -->
+          <div class="notification unread">
+            <div class="w-12 h-auto rounded-full overflow-hidden flex-shrink-0">
+              <img
+                src="assets/images/avatar-mark-webber.webp"
+                class="w-full h-full object-cover object-center"
+              />
+            </div>
+
+            <div class="w-full">
+              <div class="flex items-start justify-start gap-x-2">
+                <p class="text-darker-blue-gray">
+                  <strong class="text-deep-blue">Mark Webber</strong> reacted to
+                  your recent post <strong>My first tournament today!</strong>
+                </p>
+                <div
+                  class="dot-icon w-2 h-2 rounded-full overflow-hidden bg-red shrink-0 relative top-[9px]"
+                ></div>
+              </div>
+              <span class="time text-grayish-blue">1m ago</span>
+            </div>
+          </div>
+
+          <!-- Notification #2 -->
+          <div class="notification unread">
+            <div class="w-12 h-auto rounded-full overflow-hidden flex-shrink-0">
+              <img
+                src="assets/images/avatar-angela-gray.webp"
+                class="w-full h-full object-cover object-center"
+              />
+            </div>
+
+            <div class="w-full">
+              <div class="flex items-start justify-start gap-x-2">
+                <p class="text-darker-blue-gray">
+                  <strong class="text-deep-blue">Angela Gray </strong>followed
+                  you
+                </p>
+                <div
+                  class="dot-icon w-2 h-2 rounded-full overflow-hidden bg-red shrink-0 relative top-[9px]"
+                ></div>
+              </div>
+              <span class="time text-grayish-blue">5m ago</span>
+            </div>
+          </div>
+
+          <!-- Notification #3 -->
+          <div class="notification unread">
+            <div class="w-12 h-auto rounded-full overflow-hidden flex-shrink-0">
+              <img
+                src="assets/images/avatar-jacob-thompson.webp"
+                class="w-full h-full object-cover object-center"
+              />
+            </div>
+
+            <div class="w-full">
+              <div class="flex items-start justify-start gap-x-2">
+                <p class="text-darker-blue-gray">
+                  <strong class="text-deep-blue">Jacob Thompson </strong>joined
+                  your group <strong class="text-blue">Chess Club</strong>
+                </p>
+                <div
+                  class="dot-icon w-2 h-2 rounded-full overflow-hidden bg-red shrink-0 relative top-[9px]"
+                ></div>
+              </div>
+              <span class="time text-grayish-blue">1 day ago</span>
+            </div>
+          </div>
+
+          <!-- Notification #4 -->
+          <div class="notification">
+            <div class="w-12 h-auto rounded-full overflow-hidden flex-shrink-0">
+              <img
+                src="assets/images/avatar-rizky-hasanuddin.webp"
+                class="w-full h-full object-cover object-center"
+              />
+            </div>
+
+            <div class="w-full">
+              <div class="flex items-start justify-start gap-x-2">
+                <p class="text-darker-blue-gray">
+                  <strong class="text-deep-blue">Rizky Hasanuddin </strong>sent
+                  you a private message
+                </p>
+                <div
+                  class="dot-icon hidden w-2 h-2 rounded-full overflow-hidden bg-red shrink-0 relative top-[9px]"
+                ></div>
+              </div>
+              <span class="time text-grayish-blue">5 days ago </span>
+            </div>
+          </div>
+
+          <!-- Notification #5 -->
+          <div class="notification">
+            <div class="w-12 h-auto rounded-full overflow-hidden flex-shrink-0">
+              <img
+                src="assets/images/avatar-kimberly-smith.webp"
+                class="w-full h-full object-cover object-center"
+              />
+            </div>
+
+            <div class="w-full">
+              <div class="flex items-start justify-start gap-x-2">
+                <p class="text-darker-blue-gray">
+                  <strong class="text-deep-blue">Kimberly Smith </strong
+                  >commented on your picture
+                </p>
+                <div
+                  class="dot-icon hidden w-2 h-2 rounded-full overflow-hidden bg-red shrink-0 relative top-[9px]"
+                ></div>
+              </div>
+              <span class="time text-grayish-blue">1 week ago </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="index.js"></script>
+  </body>
+</html>
